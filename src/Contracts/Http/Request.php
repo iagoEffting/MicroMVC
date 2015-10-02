@@ -1,6 +1,6 @@
 <?php
 
-namespace MicroMVC\Contracts\Http;
+namespace IagoEffting\MicroMVC\Contracts\Http;
 
 interface Request
 {

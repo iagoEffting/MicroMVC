@@ -1,6 +1,6 @@
 <?php
 
-namespace MicroMVC\Annotations;
+namespace IagoEffting\MicroMVC\Annotations;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface as ServiceProvider;

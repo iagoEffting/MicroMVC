@@ -1,7 +1,6 @@
 <?php
 
-namespace MicroMVC\Reflection;
-
+namespace IagoEffting\MicroMVC\Reflection;
 
 class Reflection
 {

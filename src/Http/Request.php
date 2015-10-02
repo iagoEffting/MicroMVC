@@ -1,8 +1,8 @@
 <?php
 
-namespace MicroMVC\Http;
+namespace IagoEffting\MicroMVC\Http;
 
-use MicroMVC\Contracts\Http\Request as RequestInterface;
+use IagoEffting\MicroMVC\Contracts\Http\Request as RequestInterface;
 
 class Request implements RequestInterface
 {

@@ -1,12 +1,9 @@
 <?php
-/**
- * @auth
- */
 
-namespace MicroMVC;
+namespace IagoEffting\MicroMVC;
 
-use MicroMVC\Http\Response;
-use MicroMVC\Dispatcher as DispatcherTrait;
+use IagoEffting\MicroMVC\Http\Response;
+use IagoEffting\MicroMVC\Dispatcher as DispatcherTrait;
 use Pimple\Container as Pimple;
 
 class Application extends Pimple
@@ -19,12 +16,11 @@ class Application extends Pimple
 
   public function __construct($basePath) {
     $this->setBasePath($basePath);
-    //$this->router = $router;
   }
 
   public function run() {
     $routes = $this->getRoutes();
-    $router = new \MicroMVC\Routing\Router($routes);
+    $router = new \IagoEffting\MicroMVC\Routing\Router($routes);
 
     $route = $router->route($this->request, new Response());
     $this->dispatch($route, $this->request, new Response());
@@ -36,7 +32,7 @@ class Application extends Pimple
     $routes = array();
 
     foreach ($this->offsetGet('routes') as $route) {
-      $routes[] = new \MicroMVC\Routing\Route($route['path'], $route['Controller']);
+      $routes[] = new \IagoEffting\MicroMVC\Routing\Route($route['path'], $route['Controller']);
     }
 
     return $routes;

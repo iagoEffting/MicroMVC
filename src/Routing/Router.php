@@ -1,9 +1,9 @@
 <?php
 
-namespace MicroMVC\Routing;
+namespace IagoEFfting\MicroMVC\Routing;
 
-use MicroMVC\Contracts\Http\Request as RequestInterface;
-use MicroMVC\Contracts\Http\Response as ResponseInterface;
+use IagoEFfting\MicroMVC\Contracts\Http\Request as RequestInterface;
+use IagoEFfting\MicroMVC\Contracts\Http\Response as ResponseInterface;
 
 
 class Router {

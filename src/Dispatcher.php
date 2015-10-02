@@ -1,6 +1,6 @@
 <?php
 
-namespace MicroMVC;
+namespace IagoEffting\MicroMVC;
 
 Trait Dispatcher {
 

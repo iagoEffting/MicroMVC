@@ -1,8 +1,8 @@
 <?php
 
-namespace MicroMVC\Routing;
+namespace IagoEFfting\MicroMVC\Routing;
 
-use MicroMVC\Contracts\Http\Request as RequestInterface;
+use IagoEFfting\MicroMVC\Contracts\Http\Request as RequestInterface;
 
 class Route
 {

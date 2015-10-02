@@ -1,8 +1,8 @@
 <?php
 
-namespace MicroMVC\Http;
+namespace IagoEffting\MicroMVC\Http;
 
-use MicroMVC\Contracts\Http\Response as ResponseInterface;
+use IagoEffting\MicroMVC\Contracts\Http\Response as ResponseInterface;
 
 
 class Response implements ResponseInterface
