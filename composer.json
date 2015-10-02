@@ -1,5 +1,5 @@
 {
-  "name": "monolog/monolog",
+  "name": "iagoEffting/MicroMVC",
   "type": "framework",
   "description": "Simple Framework",
   "keywords": ["mvc","router"],
