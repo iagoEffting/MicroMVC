@@ -7,6 +7,9 @@ use IagoEFfting\MicroMVC\Contracts\Http\Response as ResponseInterface;
 
 
 class Router {
+
+  protected $routes;
+
   public function __construct($routes) {
     $this->addRoutes($routes);
   }
