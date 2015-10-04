@@ -19,11 +19,7 @@ class Application extends Pimple
   }
 
   public function run() {
-    $routes = $this->getRoutes();
-    $router = new \IagoEffting\MicroMVC\Routing\Router($routes);
-
-    $route = $router->route($this->request, new Response());
-    $this->dispatch($route, $this->request, new Response());
+    $this->dispatch($this->request, new Response());
   }
 
   private function getRoutes()

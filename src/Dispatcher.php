@@ -4,10 +4,27 @@ namespace IagoEffting\MicroMVC;
 
 Trait Dispatcher {
 
-  public function dispatch($route, $request, $response)
+  //public function dispatch($route, $request, $response)
+  public function dispatch($request, $response)
   {
-    $controller = $route->createController();
+    $routeSelected = $this->getUriRoute($request->uri);
 
-    echo $controller->index($request, $response);
+    $controller = new $routeSelected['Controller']();
+    $action = $routeSelected['Action'];
+
+    echo $controller->$action($request, $response);
+  }
+
+  private function getUriRoute($uri)
+  {
+
+    foreach ($this['routes'] as $route) {
+
+      if ($route['path'] == $uri) {
+        return $route;
+      }
+
+    }
+
   }
 }

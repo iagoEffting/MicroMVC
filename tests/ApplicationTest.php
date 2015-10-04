@@ -2,16 +2,13 @@
 
 require 'bootstrap.php';
 
-use MicroMVC\Application;
+use IagoEffting\MicroMVC\Application;
 
 class ApplicationTest extends PHPUnit_Framework_TestCase
 {
 
   public function testUpApplication()
   {
-
-
-    $this->assertTrue(true);
 
   }
 
