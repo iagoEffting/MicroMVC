@@ -2,9 +2,10 @@
 
 namespace IagoEffting\MicroMVC;
 
+use IagoEffting\MicroMVC\Contracts\View\ViewInterface;
+
 Trait Dispatcher {
 
-  //public function dispatch($route, $request, $response)
   public function dispatch($request, $response)
   {
     $routeSelected = $this->getUriRoute($request->uri);
@@ -12,7 +13,14 @@ Trait Dispatcher {
     $controller = new $routeSelected['Controller']();
     $action = $routeSelected['Action'];
 
-    echo $controller->$action($request, $response);
+    $view =$controller->$action($request, $response);
+
+    if ($view instanceof ViewInterface) {
+      $view->setViewContext($this);
+    }
+
+    echo $view;
+
   }
 
   private function getUriRoute($uri)

@@ -23,7 +23,7 @@ class Request implements RequestInterface
 
   public function getParam($key) {
     if (!isset($this->params[$key])) {
-      throw new \InvalidArgumentException("The request parameter with key '$key' is invalid.");
+      throw new \InvalidArgumentException("A requisição do parâmetro da chave '$key' é inválido.");
     }
     return $this->params[$key];
   }
