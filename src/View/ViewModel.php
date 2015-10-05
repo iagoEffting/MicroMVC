@@ -8,10 +8,22 @@ class ViewModel extends BaseModel
 {
 
   public $view;
+  public $data;
 
-  public function __construct($viewModel)
+  public function __construct($viewModel, $data)
   {
     $this->view = $viewModel;
+    $this->data = $data;
+  }
+
+  public function content()
+  {
+    $base = realpath($this->basePath);
+    $path = $this->config['config']['view']['path_views'];
+
+    $path = $base.'/'.$path."/".$this->view.'.php';
+
+    include $path;
   }
 
   public function __toString()
@@ -29,15 +41,6 @@ class ViewModel extends BaseModel
     }
 
     return $this->view;
-  }
-
-  public function content()
-  {
-    $base = realpath($this->basePath);
-    $path = $this->config['config']['view']['path_views'];
-
-    $path = $base.'/'.$path."/".$this->view.'.php';
-    include $path;
   }
 
 }
