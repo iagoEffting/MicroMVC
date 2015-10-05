@@ -33,7 +33,11 @@ class ViewModel extends BaseModel
 
   public function content()
   {
-    echo $this->view;
+    $base = realpath($this->basePath);
+    $path = $this->config['config']['view']['path_views'];
+
+    $path = $base.'/'.$path."/".$this->view.'.php';
+    include $path;
   }
 
 }
