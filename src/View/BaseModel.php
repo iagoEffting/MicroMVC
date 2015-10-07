@@ -4,12 +4,11 @@ namespace IagoEffting\MicroMVC\View;
 
 use IagoEffting\MicroMVC\Contracts\View\ViewInterface;
 
-class BaseModel implements ViewInterface
+abstract class BaseModel implements ViewInterface
 {
 
   protected $config;
   protected $basePath;
-
 
   public function setViewContext($container)
   {
