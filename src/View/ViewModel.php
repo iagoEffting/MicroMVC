@@ -10,7 +10,7 @@ class ViewModel extends BaseModel
   public $view;
   public $data;
 
-  public function __construct($viewModel, $data)
+  public function __construct($viewModel, $data = null)
   {
     $this->view = $viewModel;
     $this->data = $data;
