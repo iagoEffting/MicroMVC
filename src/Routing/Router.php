@@ -13,11 +13,4 @@ class Router {
 
     }
 
-    public function getRoute($uri)
-    {
-
-        var_dump($this);
-
-    }
-
 }
