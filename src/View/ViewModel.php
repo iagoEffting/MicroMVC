@@ -30,7 +30,6 @@ class ViewModel extends BaseModel
     {
 
         if ($this->config['config']['view']['template_view']) {
-
             $base = realpath($this->basePath);
             $file = $this->config['config']['view']['template_file'];
 

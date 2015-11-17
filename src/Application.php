@@ -36,7 +36,6 @@ class Application extends Pimple
         $routes = array();
 
         foreach ($this->offsetGet('routes') as $route) {
-
             $routes[] = new Route($route['path'], $route['Controller']);
 
         }
@@ -71,14 +70,11 @@ class Application extends Pimple
         $configs = array();
 
         while ($file = $directory->read()) {
-
             if ($file != '.' && $file != '..') {
-
                 $name = str_replace('.php', '', $file);
                 $configs[$name] = include $pathConfigs.$file;
 
             }
-
         }
         $directory->close();
         $this['config'] = $configs;
@@ -89,9 +85,7 @@ class Application extends Pimple
     {
 
         foreach ($this['config']['app']['providers'] as $provider) {
-
             $this->register(new $provider());
-
         }
 
     }

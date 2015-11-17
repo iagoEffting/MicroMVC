@@ -5,7 +5,7 @@ namespace IagoEffting\MicroMVC\Reflection;
 class Reflection
 {
 
-    static public  function getMethods($className)
+    public static function getMethods($className)
     {
         $modelReflector = new \ReflectionClass($className);
 

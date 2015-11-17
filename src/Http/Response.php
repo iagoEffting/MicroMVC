@@ -4,7 +4,6 @@ namespace IagoEffting\MicroMVC\Http;
 
 use IagoEffting\MicroMVC\Contracts\Http\Response as ResponseInterface;
 
-
 class Response implements ResponseInterface
 {
 
@@ -42,7 +41,8 @@ class Response implements ResponseInterface
         return $this;
     }
 
-    public function getHeaders() {
+    public function getHeaders()
+    {
 
         return $this->headers;
 
@@ -52,11 +52,8 @@ class Response implements ResponseInterface
     {
 
         if (headers_sent() == null) {
-
             foreach ($this->headers as $header) {
-
                 header("$this->version $header", true);
-
             }
         }
 

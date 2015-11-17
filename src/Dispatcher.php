@@ -4,7 +4,8 @@ namespace IagoEffting\MicroMVC;
 
 use IagoEffting\MicroMVC\Contracts\View\ViewInterface;
 
-Trait Dispatcher {
+trait Dispatcher
+{
 
     public function dispatch($request, $response)
     {
@@ -17,7 +18,6 @@ Trait Dispatcher {
         $view =$controller->$action($request, $response);
 
         if ($view instanceof ViewInterface) {
-
             $view->setViewContext($this);
 
         }
@@ -30,13 +30,12 @@ Trait Dispatcher {
     {
 
         foreach ($this['routes'] as $route) {
-
             if ($route['path'] == $uri) {
                 return $route;
             }
-
         }
 
+        return false;
     }
 
 }

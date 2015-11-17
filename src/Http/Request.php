@@ -16,10 +16,10 @@ class Request implements RequestInterface
         $this->params = $params;
     }
 
-    public function getUri() {
+    public function getUri()
+    {
 
         return $this->uri;
-
     }
 
     public function setParam($key, $value)
@@ -30,7 +30,8 @@ class Request implements RequestInterface
         return $this;
     }
 
-    public function getParam($key) {
+    public function getParam($key)
+    {
 
         if (!isset($this->params[$key])) {
             throw new \InvalidArgumentException(

@@ -2,7 +2,8 @@
 
 namespace IagoEFfting\MicroMVC\Routing;
 
-class Router {
+class Router
+{
 
     protected $routes;
 
