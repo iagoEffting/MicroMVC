@@ -7,6 +7,9 @@ use IagoEffting\MicroMVC\Contracts\Http\Request as RequestInterface;
 class Request implements RequestInterface
 {
 
+    public $uri;
+    public $params;
+
     public function __construct($uri, $params = array())
     {
         $this->uri = $uri;
