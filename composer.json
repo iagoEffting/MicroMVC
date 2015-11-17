@@ -1,27 +1,27 @@
 {
-  "name": "iago-effting/micro-mvc",
-  "type": "framework",
-  "description": "Simple Framework",
-  "keywords": ["mvc","router"],
-  "homepage": "https://github.com/iagoEffting/MicroMVC",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Iago Effting",
-      "email": "iago.effting@gmail.com",
-      "role": "Developer"
+    "name": "iago-effting/micro-mvc",
+    "type": "framework",
+    "description": "Simple Framework",
+    "keywords": ["mvc","router"],
+    "homepage": "https://github.com/iagoEffting/MicroMVC",
+    "license": "MIT",
+    "authors": [
+        {
+        "name": "Iago Effting",
+        "email": "iago.effting@gmail.com",
+        "role": "Developer"
+        }
+    ],
+    "require": {
+        "pimple/pimple": "~3.0",
+        "jan-swiecki/simple-annotations": "0.3.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "IagoEffting\\MicroMVC\\": "src/"
+        }
     }
-  ],
-  "require": {
-    "pimple/pimple": "~3.0",
-    "jan-swiecki/simple-annotations": "0.3.1"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "5.0.*"
-  },
-  "autoload": {
-    "psr-4": {
-      "IagoEffting\\MicroMVC\\": "src/"
-    }
-  }
 }

@@ -8,12 +8,12 @@ use Pimple\ServiceProviderInterface as ServiceProvider;
 class AnnotationsServiceProvider implements ServiceProvider
 {
 
-  protected $container;
+    protected $container;
 
-  public function register(Container $container)
-  {
-    $this->container = $container;
-  }
+    public function register(Container $container)
+    {
+        $this->container = $container;
+    }
 
 
 }

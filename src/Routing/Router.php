@@ -4,15 +4,20 @@ namespace IagoEFfting\MicroMVC\Routing;
 
 class Router {
 
-  protected $routes;
+    protected $routes;
 
-  public function getRoutes() {
-    return $this->routes;
-  }
+    public function getRoutes()
+    {
 
-  public function getRoute($uri)
-  {
-    var_dump($this);
-  }
+        return $this->routes;
+
+    }
+
+    public function getRoute($uri)
+    {
+
+        var_dump($this);
+
+    }
 
 }

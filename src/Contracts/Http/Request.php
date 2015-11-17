@@ -4,8 +4,10 @@ namespace IagoEffting\MicroMVC\Contracts\Http;
 
 interface Request
 {
-  public function setParam($key, $value);
-  public function getParam($key);
-  public function getParams();
-  public function getUri();
+
+    public function setParam($key, $value);
+    public function getParam($key);
+    public function getParams();
+    public function getUri();
+
 }

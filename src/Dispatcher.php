@@ -6,33 +6,37 @@ use IagoEffting\MicroMVC\Contracts\View\ViewInterface;
 
 Trait Dispatcher {
 
-  public function dispatch($request, $response)
-  {
-    $routeSelected = $this->getUriRoute($request->uri);
+    public function dispatch($request, $response)
+    {
 
-    $controller = new $routeSelected['Controller']();
-    $action = $routeSelected['Action'];
+        $routeSelected = $this->getUriRoute($request->uri);
 
-    $view =$controller->$action($request, $response);
+        $controller = new $routeSelected['Controller']();
+        $action = $routeSelected['Action'];
 
-    if ($view instanceof ViewInterface) {
-      $view->setViewContext($this);
-    }
+        $view =$controller->$action($request, $response);
 
-    echo $view;
+        if ($view instanceof ViewInterface) {
 
-  }
+            $view->setViewContext($this);
 
-  private function getUriRoute($uri)
-  {
+        }
 
-    foreach ($this['routes'] as $route) {
-
-      if ($route['path'] == $uri) {
-        return $route;
-      }
+        echo $view;
 
     }
 
-  }
+    private function getUriRoute($uri)
+    {
+
+        foreach ($this['routes'] as $route) {
+
+            if ($route['path'] == $uri) {
+                return $route;
+            }
+
+        }
+
+    }
+
 }
